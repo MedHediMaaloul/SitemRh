@@ -105,7 +105,7 @@ include ('gestion/header_sidebar.php');
                     <div class="col-sm-9 text-secondary">
                                                  
                                 <select name="poste" id="poste" class="form-control">
-                                    <option value="Choisissez" selected disabled><?php echo $row['poste_personne']; ?></option>
+                                    <option value=<?php echo $row['poste_personne']; ?> selected ><?php echo $row['poste_personne']; ?></option>
                                     <option value="Designeur">Designeur</option>
                                     <option value="Developpeur">Developpeur</option>
                                     <option value="CM">CM</option>

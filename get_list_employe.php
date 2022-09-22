@@ -13,7 +13,7 @@ if ($_POST['id_projet']) {
         $value = '
         <div class="form-group mb-4"> 
         <label class="col-md-12 p-0">Liste Employé<span class="text-danger">*</span></label>
-        <select name="list_employe" id="list_employe" class="form-group">
+        <select name="list_employe" id="list_employe" class="form-control">
         <option value="Choisissez" selected disabled>Choisissez un employé</option>
         ';
         

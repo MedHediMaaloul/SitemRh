@@ -38,7 +38,7 @@
                   <form style="font-size: 15px;" class="contact-form php-mail-form" method="POST">
                     <div class="form-group" >
                       Client : 
-                      <select id="nomClient" name="nomClient"  >
+                      <select class="form-control"  id="nomClient" name="nomClient"  >
                         <option value="Choisissez" selected disabled>Choisissez le client</option>
                         <?php
                           include('gestion/connect_db.php');
@@ -56,7 +56,7 @@
   
                     <div class="form-group">
                         Domaine : 
-                        <select name="domaine" id="domaine">
+                        <select class="form-control" name="domaine" id="domaine">
                         <option value="Choisissez" selected disabled>Choisissez le domaine</option>
                           <option value="Marketing">Marketing</option>
                           <option value="Design">Design</option>
@@ -68,7 +68,7 @@
 
                     <div class="form-group">
                       Priorité :                       
-                      <select name="perioritee" id="perioritee"  >
+                      <select class="form-control"  name="perioritee" id="perioritee"  >
                         <option value="Choisissez" selected disabled>Choisissez la priorité</option>
                         <option class="btn btn-theme03" value="1">Priorité 1</option>
                         <option class="btn btn-success" value="2">Priorité 2</option>
@@ -85,7 +85,6 @@
                     
                     <div class="form-group">
                       <textarea class="form-control" name="description" id="description" placeholder="Description" rows="5" ></textarea>
-                      <label style=" color: #D8000C;text-align: center;" class="error" for="description" id="description_error"> </label>
 
                     </div>
                     <div class="form-group">
@@ -211,7 +210,7 @@
                                 <div class="form-group mb-4">
                                   <label class="col-md-12 p-0">Domaine<span
                                   class="text-danger">*</span></label>
-                                    <select id="update_domaine">
+                                    <select id="update_domaine" class="form-control" >
                                       <option value="Marketing">Marketing</option>
                                       <option value="Design">Design</option>
                                       <option value="Developpement">Développement</option>
@@ -228,8 +227,7 @@
                                     <input type="text" class="form-control" id="up_priorite" placeholder="Priorité" >
                                 </div>
                                 <div class="form-group mb-4">
-                                  <label class="col-md-12 p-0">Description<span
-                                  class="text-danger">*</span></label>
+                                  <label class="col-md-12 p-0">Description</label>
                                     <textarea class="form-control" id="up_description" placeholder="Description" rows="5" ></textarea>
                                 </div>                             
                                         

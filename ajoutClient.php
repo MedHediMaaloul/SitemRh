@@ -59,7 +59,6 @@
 
                   <div class="form-group">
                     <textarea class="form-control" name="commentaire" id="commentaire_client" placeholder="Commentaire" rows="5" ></textarea>
-                    <label style=" color: #D8000C;text-align: center;" class="error" for="commentaire_client" id="commentaire_client_error"> </label>
                   </div>
                   <button type="submit" id="btn_ajout_client" class="btn btn-success ">Ajouter un Client</button>
                 </form>
@@ -116,8 +115,7 @@
                       <input type="text" class="form-control" id="adresseClient" data-rule="required" data-msg="Ecrire l'adresse de client">
                     </div>
                     <div class="form-group mb-4">
-                      <label class="col-md-12 p-0">Commentaire Client<span
-                      class="text-danger">*</span></label>
+                      <label class="col-md-12 p-0">Commentaire Client</label>
                       <textarea class="form-control" id="commentaireClient" rows="5" data-rule="required" data-msg="Ecrire quelque chose"></textarea>
                     </div>                             
                   </form>
