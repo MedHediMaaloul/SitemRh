@@ -267,11 +267,7 @@ body {
         color: #fff;
         text-transform: uppercase;
         border: none;
-        background-image: -moz-linear-gradient(to left, #7DFFD6, #05DD9A);
-        background-image: -ms-linear-gradient(to left, #7DFFD6, #05DD9A);
-        background-image: -o-linear-gradient(to left, #7DFFD6, #05DD9A);
-        background-image: -webkit-linear-gradient(to left, #05DD9A, #7DFFD6, #05DD9A);
-        background-image: linear-gradient(to left, #7DFFD6, #05DD9A); }
+        background:#05DD9A; }
       
 input[type=checkbox]:not(old) {
   width: 2em;
