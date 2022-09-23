@@ -4,7 +4,7 @@ include('gestion/connect_db.php');
 	if (isset($_POST['login']))
 		{
 			$email=$_POST['email'];
-			$password=$_POST['password'];
+			$password=md5($_POST['password']);
 			if ($email=="" && $password==""){
 				echo ("<script language='javascript'>
 				window.alert('Les champs sont vides.')

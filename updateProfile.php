@@ -120,7 +120,7 @@ include ('gestion/header_sidebar.php');
                       <h6 class="mb-0">Mot de passe</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <input type="password" name="password" id="password" class="form-control" value=<?php echo $row['password_personne']; ?>>
+                      <input type="password" name="password" id="password" class="form-control" value="********">
                     </div>
                   </div>
                   <div class="row mb-3" style=" margin-top:25px; margin-left: 15px;">

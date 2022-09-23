@@ -334,7 +334,9 @@ function updateUser() {
       poste = 0;
     }
     var user = $("#user").prop("files")[0];
-    
+    if (user == undefined) {
+      user = "";
+    }
       var form_data = new FormData();
       form_data.append("id", id);
       form_data.append("nom", nom);

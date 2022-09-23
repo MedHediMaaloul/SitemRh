@@ -22,7 +22,6 @@
     <section id="container">
       <?php include ('gestion/menu.php'); ?>
       <section id="main-content">
-        <section id="main-content">
           <section class="wrapper">
             <h3 style="color:#05DD9A;"> <i class="fa fa-angle-right"></i> Créer Réunion</h3>
             <p id="message"></p>
@@ -85,7 +84,6 @@
             
           </section>
         </section>
-      </section>
       <?php include ('gestion/footer.php'); ?>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -102,6 +100,12 @@
           $('#id_DebutReunion').val($('#DebutReunion').val());
           $('#id_finReunion').val($('#finReunion').val());
           var form_data = $(this).serialize();
+
+          
+           if ($('#DebutReunion').val() > $('#finReunion').val()){
+            alert("la date fin de réunion est inferieur à date début");
+            return false;
+          }else
           if($('#list_employe').val() != ''&& $('#sujetReunion').val() != '' && $('#DebutReunion').val() != '' && $('#finReunion').val() != '')
           {
             $.ajax({

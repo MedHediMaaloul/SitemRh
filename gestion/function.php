@@ -27,7 +27,7 @@ function ajoutUser(){
     else {
         
         $query= "INSERT into personne(nom_personne,prenom_personne,numTel_personne,email_personne,password_personne,cin_personne,role_personne,poste_personne,salaire_personne)
-        values('$nom','$prenom','$numTel','$email','$password','$numCIN','$role','$poste','0')";
+        values('$nom','$prenom','$numTel','$email','md5($password)','$numCIN','$role','$poste','0')";
         $result=mysqli_query($conn,$query);
 
     if ($result) {
@@ -175,11 +175,29 @@ function updateUser(){
     $password= $_POST['password'];
     $poste= $_POST['poste'];
     $user_file=$_FILES["user"];
-
     $unique_id = hash("sha256", strval(rand(100, 999999)) + strval(time()));
     $user_filename = $unique_id . "." . strtolower(pathinfo($user_file["name"], PATHINFO_EXTENSION));
     move_uploaded_file($user_file["tmp_name"], "user_Img/".$user_filename);
 
+    $query2 = "SELECT * FROM personne WHERE id_personne='$id'";
+    
+    $result2 = mysqli_query($conn, $query2);
+    while ($row2 = mysqli_fetch_assoc($result2)) {
+        if($password=="********")
+        {
+                
+                $password=$row2['password_personne'];
+            
+            
+        }else{
+            $password= md5($_POST['password']);
+        }
+        if($user_file == "")
+        {      
+            $user_filename=$row2['image_personne'];
+        }
+    }
+    
     if($_SESSION['Role'] != "Comptable"){
         $select = "SELECT * FROM personne WHERE cin_personne = '$numCIN' and  id_personne!='$id'";
         $result_select=mysqli_query($conn,$select);
@@ -198,8 +216,6 @@ function updateUser(){
       
     if ($result) {
         echo "Les informations sont mises à jour avec succès ";
-    } else {
-        echo "<div class='text-danger'> Veuillez vérifier votre requête</div> ";
     }
 }
 

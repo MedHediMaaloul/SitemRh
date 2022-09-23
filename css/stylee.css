@@ -238,7 +238,7 @@ ul.top-menu > li > .logout {
 }
 
 /*LEFT NAVIGATION ICON*/
-.dcjq-icon {
+/* .dcjq-icon {
     height:17px;
     width:17px;
     display:inline-block;
@@ -255,7 +255,7 @@ ul.top-menu > li > .logout {
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
-}
+} */
 /*---*/
 
 .nav-collapse.collapse {
@@ -442,7 +442,7 @@ a.logo span {
 .notify-row {
     float: left;
     margin-top: 15px;
-    margin-left: 692px;
+    margin-left:1100px;
 }
 
 .notify-row .notification span.label {
@@ -513,7 +513,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.extended li p.yellow {
-    background-color: #fcb322;
+    background-color: #05DD9A;
     color: #fff;
 }
 
@@ -707,9 +707,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .notify-arrow-yellow {
-    border-color: transparent transparent #FCB322;
-    border-bottom-color: #FCB322 !important;
-    border-top-color: #FCB322 !important;
+    border-color: transparent transparent #05DD9A;
+    border-bottom-color: #05DD9A !important;
+    border-top-color: #05DD9A !important;
 }
 .notify-arrow-green {
     border-color: transparent transparent #05DD9A;
