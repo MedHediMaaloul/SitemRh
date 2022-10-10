@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" action="php.php" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Login</h2>
+                    <a href="login.php"><center><img src="images/logo_sitem_noir.png" width="150px" style=" margin-top:25px;margin-bottom:50px;" /></center></a>
                         <div class="form-group">
                             <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
                         </div>
@@ -48,24 +48,24 @@
                         <p class="loginhere">
                             Créer un <a href="authentification.php" class="loginhere-link">Compte</a>
                         </p>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
             
-        </div>
+    </div>
         
-        <!-- JS -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            const togglePassword = document.querySelector("#togglePassword"); 
-            const password = document.querySelector("#password"); 
-            togglePassword.addEventListener("click", function () { 
-                // toggle the type attribute 
-                const type = password.getAttribute("type") === "password" ? "text" : "password"; 
-                password.setAttribute("type", type); 
-                // toggle the icon 
-                this.classList.toggle("bi-eye"); });
-            </script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword"); 
+        const password = document.querySelector("#password"); 
+        togglePassword.addEventListener("click", function () { 
+            // toggle the type attribute 
+            const type = password.getAttribute("type") === "password" ? "text" : "password"; 
+            password.setAttribute("type", type); 
+            // toggle the icon 
+            this.classList.toggle("bi-eye"); });
+        </script>
 </body>
 </html>

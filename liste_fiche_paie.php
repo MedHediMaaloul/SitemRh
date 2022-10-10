@@ -60,6 +60,8 @@
                     </div>
                     
                     <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Employé<span
+                              class="text-danger">*</span></label>
                       <select name="list_employe" id="list_employe" class="form-control mt-100">
                         <option value="Choisissez" selected disabled>Choisissez un employé</option>
                         <?php  include('gestion/connect_db.php');
@@ -75,9 +77,13 @@
                       </select>
                     </div>
                     <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Prime (DTN)<span
+                              class="text-danger">*</span></label>
                       <input id="prime" type="number" class="form-control mt-100" placeholder="Prime (DTN)">
                     </div>
                     <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Congés du mois<span
+                              class="text-danger">*</span></label>
                       <select name="Conge_mois" id="Conge_mois" class="form-control mt-100">
                         <option value="Choisissez" selected disabled>Choisissez congés du mois</option>
                         <option value="0">0</option>
@@ -86,6 +92,8 @@
                       </select>
                     </div>
                     <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Mois<span
+                              class="text-danger">*</span></label>
                       <select name="mois" id="mois" class="form-control mt-100">
                         <option value="Choisissez" selected disabled>Choisissez un mois</option>
                         
@@ -105,6 +113,8 @@
                       </select>
                     </div>
                     <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Année<span
+                              class="text-danger">*</span></label>
                       <input type="number" name="annee" id="annee" class="form-control mt-100" placeholder="Choisissez une année" min="2022">
                     </div>                             
                   </form>

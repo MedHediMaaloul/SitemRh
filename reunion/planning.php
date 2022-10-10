@@ -63,29 +63,56 @@ include('gestion/header_sidebar.php');
         
 			events: [
 			<?php 
-			$id_emp=$_SESSION['id_personne'];
-			$query="SELECT * FROM reunion where id_employe=$id_emp";
-			$result = mysqli_query($conn, $query);
-			while ($row = mysqli_fetch_assoc($result)) {
-				
-				foreach($events as $event): 
-					$start =$event['start'];
-					$end =$event['end'];
-					if ($row['id_reunion']==$event['id'])
-					{
-						
+			    $id_emp=$_SESSION['id_personne'];
+			    $query="SELECT * FROM reunion";
+			    $result = mysqli_query($conn, $query);
+			    while ($row = mysqli_fetch_assoc($result)) {
+			    	$employe=$row['id_employe'];
+    
+			    	if(strpos($employe, ",") == true)
+			    	{
+			    	$employe_exp = explode(",", $employe);
+			    	if ($employe_exp[0]==$id_emp || $employe_exp[1]==$id_emp)
+			    	{
+			    	foreach($events as $event): 
+			    		$start =$event['start'];
+			    		$end =$event['end'];
+			    		if ($row['id_reunion']==$event['id'])
+			    		{	
 			?>
-				    {
-				    	id: '<?php echo $event['id']; ?>',
-				    	title: '<?php echo $event['title']; ?>',
-				    	start: '<?php echo $start;?>',
-				    	end: '<?php echo $end; ?>',
-				    	color: '<?php echo $event['color'] ; ?>',
-				    	
-				    },
+				            {
+				            	id: '<?php echo $event['id']; ?>',
+				            	title: '<?php echo $event['title']; ?>',
+				            	start: '<?php echo $start;?>',
+				            	end: '<?php echo $end; ?>',
+				            	color: '<?php echo $event['color'] ; ?>',
+				            	
+				            },
 
-				<?php } 
-					endforeach; }?>
+			<?php } endforeach; }
+			    }else{
+				if ($employe==$id_emp)
+				{
+				    foreach($events as $event): 
+				    	$start =$event['start'];
+				    	$end =$event['end'];
+				    	    	
+				    	if ($row['id_reunion']==$event['id'])
+				    	{
+				    			
+			?>
+				            {
+				            	id: '<?php echo $event['id']; ?>',
+				            	title: '<?php echo $event['title']; ?>',
+				            	start: '<?php echo $start;?>',
+				            	end: '<?php echo $end; ?>',
+				            	color: '<?php echo $event['color'] ; ?>',
+				            	
+				            },
+
+			<?php } 
+					endforeach; }}}
+			?>
 			
 			<?php 
 			if (($_SESSION['Role']) == "Responsable") {
